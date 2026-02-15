@@ -1,0 +1,94 @@
+/* ========== BANANA TRIBE SECTION ========== */
+.tribe {
+  position: relative;
+  padding: 6rem 2rem;
+  overflow: hidden;
+}
+
+.tribe-bg {
+  background: 
+    radial-gradient(ellipse 100% 80% at 50% 100%, rgba(236, 72, 153, 0.2), transparent 60%),
+    radial-gradient(ellipse 80% 50% at 50% 50%, rgba(147, 51, 234, 0.15), transparent 70%);
+}
+
+.tribe .section-title {
+  background: linear-gradient(180deg, #EC4899, #FBBF24);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.tribe-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin: 3rem 0;
+}
+
+.tribe-stat {
+  text-align: center;
+  padding: 2rem 3rem;
+  background: linear-gradient(145deg, rgba(147, 51, 234, 0.3), rgba(236, 72, 153, 0.2));
+  border-radius: 20px;
+  border: 2px solid rgba(236, 72, 153, 0.4);
+  transition: all 0.3s ease;
+}
+
+.tribe-stat:hover {
+  transform: scale(1.05);
+  border-color: #EC4899;
+  box-shadow: 0 10px 30px rgba(236, 72, 153, 0.3);
+}
+
+.stat-value {
+  display: block;
+  font-family: 'Bangers', cursive;
+  font-size: 2.5rem;
+  color: #FBBF24;
+  margin-bottom: 0.25rem;
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.8);
+}
+
+.tribe-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.tribe-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  background: rgba(255,255,255,0.05);
+  border: 2px solid rgba(255,255,255,0.2);
+  border-radius: 50px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.tribe-link:hover {
+  background: var(--link-color, #EC4899);
+  border-color: var(--link-color, #EC4899);
+  transform: translateY(-3px);
+}
+
+.tribe-link-icon {
+  font-size: 1.5rem;
+}
+
+.tribe-cta {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
