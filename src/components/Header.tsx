@@ -1,4 +1,5 @@
 import './Header.css'
+import { PUMP_FUN_URL } from '../constants'
 
 export function Header() {
   return (
@@ -7,7 +8,7 @@ export function Header() {
       <nav className="header-nav">
         <a href="#phases">Chimping out stages</a>
         <a href="#tribe">Our Hood</a>
-        <a href="#tribe" className="header-buy">Buy Now</a>
+        <a href={PUMP_FUN_URL} target="_blank" rel="noopener noreferrer" className="header-buy">Buy Now</a>
       </nav>
     </header>
   )

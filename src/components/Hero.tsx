@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react'
+import { CONTRACT_ADDRESS } from '../constants'
 import './Hero.css'
 import { Monkey } from './Monkey'
 import { Splash } from './Splash'
@@ -9,6 +10,13 @@ import ngaSound from '../u_zpj3vbdres-monkey-128368.mp3'
 export function Hero() {
   const audioRef = useRef<HTMLAudioElement | null>(null)
   const [isPlaying, setIsPlaying] = useState(false)
+  const [copied, setCopied] = useState(false)
+
+  const copyContractAddress = async () => {
+    await navigator.clipboard.writeText(CONTRACT_ADDRESS)
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+  }
 
   const toggleSound = () => {
     if (!audioRef.current) return
@@ -48,8 +56,10 @@ export function Hero() {
         </p>
         <audio ref={audioRef} src={ngaSound} loop />
         <div className="hero-ctas">
-          <a href="#phases" className="btn btn-primary">COPY CA</a>
-          <a href="#phases" className="btn btn-secondary">Join the Hood on X</a>
+          <button type="button" className="btn btn-primary" onClick={copyContractAddress}>
+            {copied ? 'COPIED!' : 'COPY CA'}
+          </button>
+          <a href="https://x.com/KoolAid_dev" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">Join the Hood on X</a>
           <button type="button" className="btn btn-accent" onClick={toggleSound}>
             {isPlaying ? 'STOP SOUND' : 'NGA SOUNDS'}
           </button>

@@ -1,4 +1,5 @@
 import './BananaTribe.css'
+import { PUMP_FUN_URL } from '../constants'
 
 export function BananaTribe() {
   const links = [
@@ -40,7 +41,7 @@ export function BananaTribe() {
           ))}
         </div>
         <div className="tribe-cta">
-          <a href="#" className="btn btn-primary btn-lg">Buy $KOOLAID</a>
+          <a href={PUMP_FUN_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-lg">Buy $KOOLAID</a>
         </div>
       </div>
     </section>
